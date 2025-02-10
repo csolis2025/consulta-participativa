@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario para Jóvenes en Proceso de Reinserción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        .question select, .question input[type="radio"] {
+            margin-top: 8px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cuestionario para Jóvenes en Proceso de Reinserción</h1>
+        <form>
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <label for="experiencia">1. ¿Cómo describirías tu experiencia en el proceso de reinserción?</label>
+                <select id="experiencia" name="experiencia">
+                    <option value="muy_positiva">Muy positiva</option>
+                    <option value="algo_positiva">Algo positiva</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="algo_negativa">Algo negativa</option>
+                    <option value="muy_negativa">Muy negativa</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <label>2. ¿Sientes que tu comunidad te apoya en este proceso?</label>
+                <input type="radio" id="completamente" name="apoyo" value="completamente">
+                <label for="completamente">Sí, completamente</label><br>
+                <input type="radio" id="en_parte" name="apoyo" value="en_parte">
+                <label for="en_parte">Sí, en parte</label><br>
+                <input type="radio" id="no_seguro" name="apoyo" value="no_seguro">
+                <label for="no_seguro">No estoy seguro/a</label><br>
+                <input type="radio" id="no_parte" name="apoyo" value="no_parte">
+                <label for="no_parte">No, en parte</label><br>
+                <input type="radio" id="no_para_nada" name="apoyo" value="no_para_nada">
+                <label for="no_para_nada">No, para nada</label>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <label for="apoyo_importante">3. ¿Qué tipo de apoyo consideras más importante para ti en este momento?</label>
+                <select id="apoyo_importante" name="apoyo_importante">
+                    <option value="psicologico">Psicológico</option>
+                    <option value="educativo">Educativo o técnico</option>
+                    <option value="laboral">Laboral</option>
+                    <option value="social_familiar">Social o familiar</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <label for="barreras">4. ¿Qué barreras principales enfrentas en tu reinserción? (Selecciona una)</label>
+                <select id="barreras" name="barreras">
+                    <option value="discriminacion">Discriminación o prejuicios</option>
+                    <option value="falta_empleo">Falta de oportunidades laborales</option>
+                    <option value="dificultad_estudios">Dificultad para retomar estudios</option>
+                    <option value="otro">Otros</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <label for="actividades">5. ¿Qué actividades o programas crees que te ayudarían más?</label>
+                <select id="actividades" name="actividades">
+                    <option value="talleres_laborales">Talleres laborales</option>
+                    <option value="grupos_apoyo">Grupos de apoyo o terapias</option>
+                    <option value="actividades_culturales">Actividades culturales o deportivas</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question">
+                <label>6. ¿Te gustaría participar en actividades para promover la inclusión de jóvenes como tú?</label>
+                <input type="radio" id="si" name="inclusion" value="si">
+                <label for="si">Sí</label><br>
+                <input type="radio" id="no" name="inclusion" value="no">
+                <label for="no">No</label><br>
+                <input type="radio" id="depende" name="inclusion" value="depende">
+                <label for="depende">Depende de la actividad</label>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="question">
+                <label for="cambios">7. ¿Qué cambios te gustaría ver en tu entorno para que la reinserción sea más fácil?</label>
+                <select id="cambios" name="cambios">
+                    <option value="mas_empleo">Más oportunidades laborales</option>
+                    <option value="sensibilizacion">Mayor sensibilización comunitaria</option>
+                    <option value="apoyo_psicologico">Apoyo psicológico accesible</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="button-container">
+                <button type="submit">Enviar Respuestas</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
